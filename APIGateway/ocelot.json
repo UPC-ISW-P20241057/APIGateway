@@ -1,0 +1,19 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:47676"
+  },
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/todos",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/test/todos",
+      "UpstreamHttpMethod": ["GET"]
+    }
+  ]
+}
