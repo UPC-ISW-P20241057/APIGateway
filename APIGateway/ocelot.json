@@ -12,7 +12,7 @@
           "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/gateway/v1/todos",
+      "UpstreamPathTemplate": "/test/todos",
       "UpstreamHttpMethod": ["GET"]
     }
   ]
