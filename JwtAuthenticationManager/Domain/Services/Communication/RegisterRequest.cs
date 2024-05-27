@@ -10,8 +10,8 @@ public class RegisterRequest
     [Required]
     public string Password { get; set; }
     [Required]
-    [StringLength(1)]
-    public char Role { get; set; }
+    [MaxLength(15)]
+    public string Role { get; set; }
     [Required]
     [StringLength(9)]
     public string Phone { get; set; }
