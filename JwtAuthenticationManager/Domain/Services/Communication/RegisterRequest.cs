@@ -13,7 +13,7 @@ public class RegisterRequest
     [MaxLength(15)]
     public string Role { get; set; }
     [Required]
-    [StringLength(9)]
+    [Length(9, 9)]
     public string Phone { get; set; }
     [Required]
     [MaxLength(100)]

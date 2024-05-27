@@ -15,8 +15,11 @@ public class SecurityDbContext(DbContextOptions options): DbContext(options)
         builder.Entity<User>().ToTable("Users");
         builder.Entity<User>().HasKey(p => p.Id);
         builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<User>().Property(p => p.Email).IsRequired();
-        builder.Entity<User>().Property(p => p.Role).IsRequired();
+        builder.Entity<User>().Property(p => p.Email).IsRequired().HasMaxLength(100);
+        builder.Entity<User>().Property(p => p.Role).IsRequired().HasMaxLength(15);
+        builder.Entity<User>().Property(p => p.Phone).IsRequired().HasMaxLength(9).IsFixedLength();
+        builder.Entity<User>().Property(p => p.Name).IsRequired().HasMaxLength(100);
+        builder.Entity<User>().Property(p => p.LastName).IsRequired().HasMaxLength(100);
         
         // Apply Snake Case Naming Convention
         

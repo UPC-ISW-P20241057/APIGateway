@@ -8,7 +8,7 @@ public class UpdateRequest
     public string Password { get; set; }
     [MaxLength(15)]
     public string Role { get; set; }
-    [StringLength(9)]
+    [Length(9, 9)]
     public string Phone { get; set; }
     [MaxLength(100)]
     public string Name { get; set; }
