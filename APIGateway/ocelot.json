@@ -1,6 +1,6 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:44304"
+    "BaseUrl": "https://medibox-gateway-devel.azurewebsites.net"
   },
   "Routes": [
     {
@@ -9,8 +9,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44337
+          "Host": "medibox-identity-microservice-devel.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/users/sign-up"
@@ -21,8 +21,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44337
+          "Host": "medibox-identity-microservice-devel.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/users/sign-in"
@@ -33,8 +33,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44337
+          "Host": "medibox-identity-microservice-devel.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/users",
@@ -52,8 +52,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44337
+          "Host": "medibox-identity-microservice-devel.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/users/{id}",
@@ -214,7 +214,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/reminders/{id}",
-      "UpstreamHttpMethod": ["GET","PUT","DELETE"],
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -227,6 +227,42 @@
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       }
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/v1/weights",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "medibox-pillbox-devel.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/weights"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/v1/weights/{id}",
+      "UpstreamHttpMethod": [ "PUT", "PATCH" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "medibox-pillbox-devel.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/weights/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/v1/weights/latest",
+      "UpstreamHttpMethod": [ "GET", "PATCH" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "medibox-pillbox-devel.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/weights/latest"
     }
   ]
 }
