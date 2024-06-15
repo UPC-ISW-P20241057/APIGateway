@@ -242,7 +242,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/weights/{id}",
-      "UpstreamHttpMethod": [ "PUT", "PATCH" ],
+      "UpstreamHttpMethod": ["GET", "PUT", "PATCH" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -263,6 +263,18 @@
         }
       ],
       "DownstreamPathTemplate": "/api/weights/latest"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/v1/weights/esp/{id}",
+      "UpstreamHttpMethod": ["PATCH"],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "medibox-pillbox-devel.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/weights/esp/{id}"
     }
   ]
 }
