@@ -65,11 +65,11 @@
     {
       "UpstreamPathTemplate": "/gateway/v1/frequencies",
       "UpstreamHttpMethod": ["GET", "POST"],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/frequencies",
@@ -81,11 +81,11 @@
     {
       "UpstreamPathTemplate": "/gateway/v1/frequencies/{id}",
       "UpstreamHttpMethod": ["PUT"],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/frequencies/{id}",
@@ -97,11 +97,11 @@
     {
       "UpstreamPathTemplate": "/gateway/v1/intervals",
       "UpstreamHttpMethod": ["GET", "POST"],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/intervals",
@@ -113,11 +113,11 @@
     {
       "UpstreamPathTemplate": "/gateway/v1/intervals/{id}",
       "UpstreamHttpMethod": ["PUT"],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/intervals/{id}",
@@ -129,11 +129,11 @@
     {
       "UpstreamPathTemplate": "/gateway/v1/medicines",
       "UpstreamHttpMethod": ["GET"],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/medicines",
@@ -145,11 +145,11 @@
     {
       "UpstreamPathTemplate": "/gateway/v1/medicines",
       "UpstreamHttpMethod": ["POST"],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/medicines",
@@ -164,11 +164,11 @@
     {
       "UpstreamPathTemplate": "/gateway/v1/medicines/{id}",
       "UpstreamHttpMethod": ["GET"],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/medicines/{id}",
@@ -180,11 +180,11 @@
     {
       "UpstreamPathTemplate": "/gateway/v1/medicines/{id}",
       "UpstreamHttpMethod": ["PUT","DELETE"],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/medicines/{id}",
@@ -199,11 +199,11 @@
     {
       "UpstreamPathTemplate": "/gateway/v1/reminders",
       "UpstreamHttpMethod": ["GET", "POST"],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/reminders",
@@ -215,11 +215,11 @@
     {
       "UpstreamPathTemplate": "/gateway/v1/reminders/{id}",
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
         }
       ],
       "DownstreamPathTemplate": "/api/v1/reminders/{id}",
