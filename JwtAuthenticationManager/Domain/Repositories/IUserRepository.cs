@@ -9,7 +9,7 @@ public interface IUserRepository
     Task<User> FindByIdAsync(long id);
     Task<User> FindByEmailAsync(string email);
     bool ExistsByEmail(string email);
-    User FindById(int id);
+    User FindById(long id);
     void Update(User user);
     void Remove(User user);
 }
