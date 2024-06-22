@@ -229,8 +229,8 @@
       }
     },
     {
-      "UpstreamPathTemplate": "/gateway/v1/users/{id}/reminders",
-      "UpstreamHttpMethod": ["GET"],
+      "UpstreamPathTemplate": "/gateway/v1/people/{id}/reminders",
+      "UpstreamHttpMethod": [ "GET" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -292,5 +292,8 @@
       ],
       "DownstreamPathTemplate": "/api/weights/esp/{id}"
     }
+  ],
+  "ReRoutes": [
+    
   ]
 }
