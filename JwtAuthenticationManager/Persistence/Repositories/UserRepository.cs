@@ -35,7 +35,7 @@ public class UserRepository(SecurityDbContext context): IUserRepository
         return _context.Users.Any(p => p.Email == email);
     }
 
-    public User FindById(int id)
+    public User FindById(long id)
     {
         return _context.Users.Find(id);
     }

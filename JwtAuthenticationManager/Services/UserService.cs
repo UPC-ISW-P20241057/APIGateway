@@ -25,7 +25,7 @@ public class UserService(IUserRepository userRepository, IMapper mapper, IUnitOf
         return await  _userRepository.ListAsync();
     }
 
-    public async Task<User> GetByIdAsync(int id)
+    public async Task<User> GetByIdAsync(long id)
     {
         var user = await _userRepository.FindByIdAsync(id);
         if (user == null)
@@ -87,7 +87,7 @@ public class UserService(IUserRepository userRepository, IMapper mapper, IUnitOf
         }
     }
     
-    public async Task UpdateAsync(int id, UpdateRequest request)
+    public async Task UpdateAsync(long id, UpdateRequest request)
     {
 
         var user = GetById(id);
@@ -111,7 +111,7 @@ public class UserService(IUserRepository userRepository, IMapper mapper, IUnitOf
         }
     }
 
-    public async Task DeleteAsync(int id)
+    public async Task DeleteAsync(long id)
     {
         var user = GetById(id);
         try
@@ -125,7 +125,7 @@ public class UserService(IUserRepository userRepository, IMapper mapper, IUnitOf
         }
     }
 
-    private User GetById(int id)
+    private User GetById(long id)
     {
         var user = _userRepository.FindById(id);
         if (user == null) throw new KeyNotFoundException("User not found.");
