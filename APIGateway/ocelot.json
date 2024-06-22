@@ -5,7 +5,7 @@
   "Routes": [
     {
       "UpstreamPathTemplate": "/gateway/v1/users/sign-up",
-      "UpstreamHttpMethod": ["POST"],
+      "UpstreamHttpMethod": [ "POST" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -17,7 +17,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/users/sign-in",
-      "UpstreamHttpMethod": ["POST"],
+      "UpstreamHttpMethod": [ "POST" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -29,7 +29,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/users",
-      "UpstreamHttpMethod": ["GET"],
+      "UpstreamHttpMethod": [ "GET" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -48,7 +48,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/users/{id}",
-      "UpstreamHttpMethod": ["GET", "PUT", "DELETE"],
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -64,7 +64,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/frequencies",
-      "UpstreamHttpMethod": ["GET", "POST"],
+      "UpstreamHttpMethod": [ "GET", "POST" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -80,7 +80,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/frequencies/{id}",
-      "UpstreamHttpMethod": ["PUT"],
+      "UpstreamHttpMethod": [ "PUT" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -96,7 +96,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/intervals",
-      "UpstreamHttpMethod": ["GET", "POST"],
+      "UpstreamHttpMethod": [ "GET", "POST" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -112,7 +112,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/intervals/{id}",
-      "UpstreamHttpMethod": ["PUT"],
+      "UpstreamHttpMethod": [ "PUT" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -128,7 +128,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/medicines",
-      "UpstreamHttpMethod": ["GET"],
+      "UpstreamHttpMethod": [ "GET" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -144,7 +144,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/medicines",
-      "UpstreamHttpMethod": ["POST"],
+      "UpstreamHttpMethod": [ "POST" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -163,7 +163,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/medicines/{id}",
-      "UpstreamHttpMethod": ["GET"],
+      "UpstreamHttpMethod": [ "GET" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -179,7 +179,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/medicines/{id}",
-      "UpstreamHttpMethod": ["PUT","DELETE"],
+      "UpstreamHttpMethod": [ "PUT", "DELETE" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -198,7 +198,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/reminders",
-      "UpstreamHttpMethod": ["GET", "POST"],
+      "UpstreamHttpMethod": [ "GET", "POST" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -229,6 +229,22 @@
       }
     },
     {
+      "UpstreamPathTemplate": "/gateway/v1/users/{id}/reminders",
+      "UpstreamHttpMethod": ["GET"],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/users/{id}/reminders",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
       "UpstreamPathTemplate": "/gateway/v1/weights",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamScheme": "https",
@@ -242,7 +258,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/weights/{id}",
-      "UpstreamHttpMethod": ["GET", "PUT", "PATCH" ],
+      "UpstreamHttpMethod": [ "GET", "PUT", "PATCH" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -266,7 +282,7 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/v1/weights/esp/{id}",
-      "UpstreamHttpMethod": ["PATCH"],
+      "UpstreamHttpMethod": [ "PATCH" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
