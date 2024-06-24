@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\9no ciclo\\Taller de proyecto 1\\desarollo\\APIGateway\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD502F25-5C13-4F1A-9BC9-9304B8B016B6}|APIGateway\\APIGateway.csproj|d:\\9no ciclo\\taller de proyecto 1\\desarollo\\apigateway\\apigateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD502F25-5C13-4F1A-9BC9-9304B8B016B6}|APIGateway\\APIGateway.csproj|solutionrelative:apigateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "D:\\9no ciclo\\Taller de proyecto 1\\desarollo\\APIGateway\\APIGateway\\ocelot.json",
+              "RelativeDocumentMoniker": "APIGateway\\ocelot.json",
+              "ToolTip": "D:\\9no ciclo\\Taller de proyecto 1\\desarollo\\APIGateway\\APIGateway\\ocelot.json",
+              "RelativeToolTip": "APIGateway\\ocelot.json",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAHAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-22T20:24:26.864Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

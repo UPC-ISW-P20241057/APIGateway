@@ -245,6 +245,41 @@
       }
     },
     {
+      "UpstreamPathTemplate": "/gateway/v1/conflictingmedicines",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/conflictingmedicines",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/v1/conflictingmedicines",
+      "UpstreamHttpMethod": [ "PATCH" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "medibox-medication-microservice.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/conflictingmedicines",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
       "UpstreamPathTemplate": "/gateway/v1/weights",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamScheme": "https",
@@ -292,8 +327,5 @@
       ],
       "DownstreamPathTemplate": "/api/weights/esp/{id}"
     }
-  ],
-  "ReRoutes": [
-    
   ]
 }
