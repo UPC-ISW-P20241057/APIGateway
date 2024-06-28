@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "APIGateway\APIGateway.csproj", "{AD502F25-5C13-4F1A-9BC9-9304B8B016B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtAuthenticationManager", "JwtAuthenticationManager\JwtAuthenticationManager.csproj", "{53E237E9-82CB-4D8C-9125-C3A415E547C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{E19E0228-B01D-4503-A8C2-FEC559751869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Microservice", "Identity.Microservice\Identity.Microservice.csproj", "{D02EBBAC-9ADC-4F00-9FC4-685E97923EC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,16 @@ Global
 		{AD502F25-5C13-4F1A-9BC9-9304B8B016B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD502F25-5C13-4F1A-9BC9-9304B8B016B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD502F25-5C13-4F1A-9BC9-9304B8B016B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E237E9-82CB-4D8C-9125-C3A415E547C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E237E9-82CB-4D8C-9125-C3A415E547C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E237E9-82CB-4D8C-9125-C3A415E547C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E237E9-82CB-4D8C-9125-C3A415E547C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02EBBAC-9ADC-4F00-9FC4-685E97923EC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02EBBAC-9ADC-4F00-9FC4-685E97923EC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02EBBAC-9ADC-4F00-9FC4-685E97923EC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02EBBAC-9ADC-4F00-9FC4-685E97923EC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D02EBBAC-9ADC-4F00-9FC4-685E97923EC7} = {E19E0228-B01D-4503-A8C2-FEC559751869}
 	EndGlobalSection
 EndGlobal
