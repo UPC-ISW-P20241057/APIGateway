@@ -67,10 +67,16 @@ public class UserService(IUserRepository userRepository, IMapper mapper, IUnitOf
         return response;
     }
 
-    public async Task RegisterAsync(RegisterRequest request)
+    public async Task<(bool, string)> RegisterAsync(RegisterRequest request)
     {
+        bool result;
+        string message;
         if (_userRepository.ExistsByEmail(request.Email))
-            throw new AppException($"Email '{request.Email}' is already taken.");
+        {
+            result = false;
+            message = $"El email '{request.Email}' ya es usado por otro usuario.";
+            return (result, message);
+        }
 
         var user = _mapper.Map<User>(request);
 
@@ -80,11 +86,17 @@ public class UserService(IUserRepository userRepository, IMapper mapper, IUnitOf
         {
             await _userRepository.AddAsync(user);
             await _unitOfWork.CompleteAsync();
+            result = true;
+            message = "Registro exitoso";
+            return (result, message);
         }
         catch (Exception e)
         {
-            throw new AppException($"An error occurred while saving the user: {e.Message}");
+            result = false;
+            message = $"Un error ocurrio al registrar el usuario: {e.Message}";
+            return (result, message);
         }
+        
     }
     
     public async Task UpdateAsync(long id, UpdateRequest request)

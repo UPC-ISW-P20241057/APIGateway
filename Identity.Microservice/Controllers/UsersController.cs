@@ -24,8 +24,10 @@ public class UsersController(IUserService userService, IMapper mapper) : Control
     [HttpPost("sign-up")]
     public async Task<IActionResult> RegisterAsync(RegisterRequest request)
     {
-        await _userService.RegisterAsync(request);
-        return Ok(new {message = "Registration successful"});
+        (bool result, string message) = await _userService.RegisterAsync(request);
+        if (result)
+            return Ok(new { message = message });
+        return BadRequest(new { message = message });
     }
 
     [HttpGet]
